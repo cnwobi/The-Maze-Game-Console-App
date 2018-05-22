@@ -44,7 +44,7 @@ public class DungeonMaster {
         gameClient.getReply("\n<<Hit enter to continue>>");
         gameClient.playerMessage("“The Inn is located in the town of Mount Helenis south of here, but the woods are not safe as Gregor’s thugs are everywhere. Take my sword as I am too week to use it”\n" +
                 "With that Jonesy tosses a sword to your feet and you bend down to pick it up. When you look up again Jonesy is gone!\n");
-        thePlayer = Player.getInstance(playerName,29,21,20);
+        thePlayer = Player.getInstance(playerName,45,21,20);
         thePlayer.setCurrentLocation(gameData.getStartingLocation());
 
         gameClient.playerMessage("You find yourself looking at ");

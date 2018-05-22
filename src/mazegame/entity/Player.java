@@ -141,8 +141,15 @@ public int getWeightLimit() {
             return "You cannot equip more than one shield at a time....unequip [" + equippedShield.get(0).getLabel() + "] before equipping ["+shield.getLabel()+"]";
 
     }
-    public ArrayList<Weapon> getEquipped() {
+    public ArrayList<Weapon> getEquippedWeapon() {
         return equippedWeapon;
+    }
+    public ArrayList<Armor> getEquippedArmor(){
+        return equippedArmor;
+    }
+
+    public ArrayList<Shield> getEquippedShield() {
+        return equippedShield;
     }
 
     public void setEquipped(ArrayList<Weapon> equipped) {

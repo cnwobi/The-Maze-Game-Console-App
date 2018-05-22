@@ -24,7 +24,7 @@ public class NonPlayerCharacter extends Character {
 
 
     }
-    public NonPlayerCharacter(String name, int agility, int lifepoints, int strength,Boolean hostile, Weapon weapon) {
+    public NonPlayerCharacter(String name, int agility, int lifepoints, int strength,Boolean hostile, Weapon weapon,Armor armor) {
 
         super(name);
         this.hostile = hostile;
@@ -32,6 +32,9 @@ public class NonPlayerCharacter extends Character {
         super.setAgility(agility);
         super.setLifePoints(lifepoints);
         this.weapon=weapon;
+        this.armor=armor;
+        this.shield=shield;
+
 
 
     }
@@ -89,5 +92,13 @@ public class NonPlayerCharacter extends Character {
 
     public Weapon getWeapon() {
         return weapon;
+    }
+
+    public Armor getArmor() {
+        return armor;
+    }
+
+    public Shield getShield() {
+        return shield;
     }
 }

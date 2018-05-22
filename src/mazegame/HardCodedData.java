@@ -56,9 +56,9 @@ public class HardCodedData implements IMazeData {
 
         //add location characters
          startUp.addNonPlayerCharacters("chukas",new NonPlayerCharacter("Chuka",20,21,10,false));
-        drawBridge.addNonPlayerCharacters("philip",new NonPlayerCharacter("philip",20,21,10,true,(Weapon)weapons.getWeapon("falchion")));
-        drawBridge.addNonPlayerCharacters("hacka",new NonPlayerCharacter("hacka",19,7,13,true,(Weapon)weapons.getWeapon("falchion")));
-        drawBridge.addNonPlayerCharacters("troy",new NonPlayerCharacter("troy",19,7,13,true,(Weapon)weapons.getWeapon("falchion")));
+        drawBridge.addNonPlayerCharacters("philip",new NonPlayerCharacter("philip",20,21,10,true,(Weapon)weapons.getWeapon("falchion"),(Armor)armors.getArmor("leather")));
+        drawBridge.addNonPlayerCharacters("hacka",new NonPlayerCharacter("hacka",19,7,13,true,(Weapon)weapons.getWeapon("falchion"),(Armor)armors.getArmor("padded")));
+        drawBridge.addNonPlayerCharacters("troy",new NonPlayerCharacter("troy",19,7,13,true,(Weapon)weapons.getWeapon("falchion"),(Armor)armors.getArmor("studded-leather")));
          // add location items
        // startUp.addItems("sword-bastard", new Weapon("sword-bastard",1000,390,"a  large sword designed to be used primarily with two hands"));
         startUp.addItems("battleaxe",new Weapon("battleaxe",10,7,"a large broad-bladed axe used in ancient warfare.",8,1));
@@ -250,6 +250,6 @@ public class HardCodedData implements IMazeData {
         ArmorTable armorTable = ArmorTable.getInstance();
         armorTable.setArmor("padded",new Armor("padded",5,1,10));
         armorTable.setArmor("leather",new Armor("leather",10,2,15));
-        armorTable.setArmor("studded leather",new Armor("studded leather",25,4,20));
+        armorTable.setArmor("studded-leather",new Armor("studded-leather",25,4,20));
     }
 }
