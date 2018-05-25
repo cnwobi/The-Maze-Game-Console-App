@@ -19,6 +19,7 @@ public class DropCommand implements Command {
         }
         Item removedItem = player.getPlayerInventory().getItemList().get(itemLabel);
         player.getPlayerInventory().removeItem(itemLabel);
+        player.setWeightLimit(player.getWeightLimit()+(int)removedItem.getWeight());
         player.getCurrentLocation().addItems(itemLabel,removedItem);
         return new CommandResponse("Item has been removed from inventory");
     }

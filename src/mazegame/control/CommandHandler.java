@@ -15,7 +15,7 @@ public class CommandHandler {
     public CommandResponse processTurn (String userInput, Player thePlayer) {
         availableCommands = availableCommands.update(thePlayer);
         ParsedInput validInput = parse(userInput);
-        Command theCommand = (Command) availableCommands.getCommand(validInput.getCommand());
+        Command theCommand =  availableCommands.getCommand(validInput.getCommand());
         if (theCommand == null) {
             return new CommandResponse("Not a valid command");
         }

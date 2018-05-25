@@ -8,6 +8,9 @@ public class Player extends Character {
 	
 	private Location currentLocation;
 	private Location lastLocation;
+    private String equippedShieldName;
+    private  String equippedArmorName;
+    private String equippedWeaponName;
 
     public Location getLastLocation() {
         return lastLocation;
@@ -59,7 +62,7 @@ public int getWeightLimit() {
 
     public void setWeightLimit(int weight) {
 
-        this.weightLimit -= weight;
+        this.weightLimit = weight;
     }
 
 
@@ -159,5 +162,69 @@ public int getWeightLimit() {
     @Override
     public String restorLifePoints(int lifePoints) {
         return super.restorLifePoints(lifePoints);
+    }
+
+    public String getEquippedShieldName() {
+        if (equippedShield.size()==0){
+            equippedShieldName= "None";
+
+        }
+        else {
+            equippedShieldName = equippedShield.get(0).getLabel();
+        }
+        return equippedShieldName;
+    }
+
+    public String getEquippedArmorName() {
+        if(equippedArmor.size()==0){
+            equippedArmorName = "None";
+        }
+        else {
+            equippedArmorName = equippedArmor.get(0).getLabel();
+        }
+        return equippedArmorName;
+    }
+
+    public String getEquippedWeaponName() {
+        if(equippedWeapon.size()==0){
+            equippedWeaponName = "None";
+        }
+        else {
+            equippedWeaponName = equippedWeapon.get(0).getLabel();
+        }
+        return equippedWeaponName;
+    }
+
+    public String getLastLocationName(){
+        if (lastLocation ==null){
+            return "None";
+        }
+        else {
+            return lastLocation.getLabel();
+        }
+    }
+
+    @Override
+    public String toString() {
+
+
+
+        if (equippedWeapon.size()==0){
+
+        }
+
+        return "************************************************************\n" +
+                "Looking at Player\n" +
+                "************************************************************\n" +
+                "Current location :: ["+ currentLocation.getLabel()+"]\n" +
+                "************************************************************\n" +
+                "Last location :: ["+ getLastLocationName()+"]\n" +
+                "************************************************************\n" +
+                "Equipped Weapon:: ["+getEquippedWeaponName()+"]\n" +
+                "************************************************************\n" +
+                "Equipped Shield :: ["+getEquippedShieldName()+"]\n" +
+                "************************************************************\n" +
+                "Equipped Armor :: ["+getEquippedArmorName()+"]\n" +
+                "************************************************************\n";
     }
 }

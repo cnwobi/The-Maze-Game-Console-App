@@ -18,7 +18,9 @@ public class SellCommand implements Command {
         }
          double accountBalanceBeforeSale= thePlayer.getPlayerInventory().getGold().getTotal();
         thePlayer.getPlayerInventory().addMoney(desiredWeapon.getPrice()*0.8);
+        Item removedItem = thePlayer.getPlayerInventory().getItem(itemLabel);
         thePlayer.getPlayerInventory().removeItem(itemLabel);
+        thePlayer.setWeightLimit(thePlayer.getWeightLimit()+(int)removedItem.getWeight());
         String stars ="****************************************************\n";
         return new CommandResponse (stars+"--Transaction Complete--\n"+stars +
                 "You successfully sold ["+itemLabel+"] for "+ (desiredWeapon.getPrice()*.80) +

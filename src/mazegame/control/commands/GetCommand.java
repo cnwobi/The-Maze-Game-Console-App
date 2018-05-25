@@ -34,7 +34,7 @@ public class GetCommand implements Command {
            }
            return new CommandResponse("Life points full already!");
        }*/
-       player.setWeightLimit(((int)desiredItem.getWeight()));
+       player.setWeightLimit(player.getWeightLimit()-((int)desiredItem.getWeight()));
        player.getPlayerInventory().addItem(desiredItem);
        player.getCurrentLocation().removeItem(itemLabel);
        return new CommandResponse("You successfully added " + itemLabel + " and your remaining weight  capacity is :" + player.getWeightLimit()+" lb");

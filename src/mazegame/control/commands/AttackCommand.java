@@ -114,12 +114,12 @@ public class AttackCommand implements Command {
            int attackRoll = diceRoller.generateAbilityScore(nonPlayerCharacter.getWeapon().getDiceFace(), nonPlayerCharacter.getWeapon().getNumberOfRolls());
           this.globalLifeB4Attack = thePlayer.getLifePoints();
           globalAttackRoll = attackRoll;
-          gameClient.playerMessage("attackRoll: " +attackRoll+" globalLifeAttackRoll: "+globalLifeB4Attack+" globalAttachRoll: "+globalAttackRoll);
+           gameClient.playerMessage("attackRoll: " +attackRoll+" globalLifeAttackRoll: "+globalLifeB4Attack+" globalAttachRoll: "+globalAttackRoll);
            thePlayer.setLifePoints(thePlayer.getLifePoints() - attackRoll);
 
            if (thePlayer.getLifePoints() <= 0) {
                gameClient.playerMessage("---You have been killed by " + nonPlayerCharacter.getName());
-               return new CommandResponse("---You have been killed by " + nonPlayerCharacter.getName(), true);
+               return new CommandResponse("---Game over! You have been killed by " + nonPlayerCharacter.getName() +"----", true);
            }
        }
 

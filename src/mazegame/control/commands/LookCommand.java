@@ -2,7 +2,6 @@ package mazegame.control.commands;
 
 import mazegame.control.CommandResponse;
 import mazegame.control.ParsedInput;
-import mazegame.control.commands.Command;
 import mazegame.entity.Exit;
 import mazegame.entity.Item;
 import mazegame.entity.NonPlayerCharacter;
@@ -15,13 +14,20 @@ public class LookCommand implements Command {
     public CommandResponse execute(ParsedInput userInput, Player thePlayer) {
         response = new CommandResponse("Can't find that to look at here!");
         if (userInput.getArguments().size() == 0){
-            response.setMessage("If you want to look at something you have to tell me what...'try look location'");
+            response.setMessage(thePlayer.getCurrentLocation().toString());
+            return response;
         }
         if(userInput.getArguments().contains("location")) {
             response.setMessage(thePlayer.getCurrentLocation().toString());
             return response;
         }
+        if(userInput.getArguments().contains("player")){
+            response.setMessage(thePlayer.toString());
+            return response;
+        }
         for (Object argument: userInput.getArguments()) {
+            /*This for loop checks the location if it contains
+            * an exit, character*/
             if (thePlayer.getCurrentLocation().containsExit(argument.toString())) {
                 Exit theExit = thePlayer.getCurrentLocation().getExit((String)argument);
                 return new CommandResponse(theExit.getDescription());
@@ -31,7 +37,7 @@ public class LookCommand implements Command {
 
                 return new CommandResponse(nonPlayerCharacter.toString());
             }
-            else if (thePlayer.getCurrentLocation().containsWeapon(argument.toString())){
+            else if (thePlayer.getCurrentLocation().containsItem(argument.toString())){
                 Item item = thePlayer.getCurrentLocation().getItem((String) argument);
                 return new CommandResponse(item.toString());
             }

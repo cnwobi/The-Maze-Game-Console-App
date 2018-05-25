@@ -121,7 +121,7 @@ public class Location {
         return nonPlayerCharacters.containsKey(characterName);
     }
 
-    public boolean containsWeapon(String label) {
+    public boolean containsItem(String label) {
         return inventory.containsKey(label);
     }
 

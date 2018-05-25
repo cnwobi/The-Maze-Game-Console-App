@@ -42,7 +42,7 @@ public class BuyCommand implements Command {
 
         thePlayer.getPlayerInventory().addItem(desiredItem);
 
-        thePlayer.setWeightLimit(((int)desiredItem.getWeight()));
+        thePlayer.setWeightLimit(thePlayer.getWeightLimit()-((int)desiredItem.getWeight()));
 
         String stars ="****************************************************\n";
         return new CommandResponse (stars+"--Transaction Complete--\n"+stars +

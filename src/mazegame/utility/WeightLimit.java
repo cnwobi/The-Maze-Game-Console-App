@@ -31,4 +31,6 @@ public class WeightLimit {
             return lookup.get(strength);
         return -1;
 	}
+
+
 }
