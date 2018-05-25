@@ -80,8 +80,8 @@ public class HardCodedData implements IMazeData {
         gregorsCastle.addExit("south", new Exit("you see a you see a drawbridge that lead you to Gregor's Castle... to the south", drawBridge));
        drawBridge.addExit("north", new Exit("you see a terrifying large castle where the evil Gregor lives to the north", gregorsCastle,true));
 
-        drawBridge.addExit("southwest", new Exit("you see a  place where godly weapons are forged to the southwest", blackSmith));
-        blackSmith.addExit("northeast", new Exit("yyou see a you see a drawbridge that lead you to Gregor's Castle...  to the northeast", drawBridge));
+        drawBridge.addExit("southeast", new Exit("you see a  place where godly weapons are forged to the southwest", blackSmith));
+        blackSmith.addExit("northwest", new Exit("yyou see a you see a drawbridge that lead you to Gregor's Castle...  to the northeast", drawBridge));
 
 	}
     private void populateStrengthTable()

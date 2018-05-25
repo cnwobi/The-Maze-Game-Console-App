@@ -97,7 +97,7 @@ public class AttackCommand implements Command {
                 playerArmorClass =  thePlayer.getEquippedShield().get(0).getBonus();
             }
             else if (thePlayer.getEquippedArmor().size() ==0 && thePlayer.getEquippedShield().size()==0){
-                gameClient.playerMessage("Warning!!!!!!!! you have not equipped any shield nor armor\n");
+                gameClient.playerMessage("\nWarning!!!!!!!! you have not equipped any shield nor armor\n");
 
 
             }
