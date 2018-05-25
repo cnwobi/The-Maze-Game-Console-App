@@ -14,7 +14,10 @@ public class LookCommand implements Command {
 
     public CommandResponse execute(ParsedInput userInput, Player thePlayer) {
         response = new CommandResponse("Can't find that to look at here!");
-        if(userInput.getArguments().size() == 0) {
+        if (userInput.getArguments().size() == 0){
+            response.setMessage("If you want to look at something you have to tell me what...'try look location'");
+        }
+        if(userInput.getArguments().contains("location")) {
             response.setMessage(thePlayer.getCurrentLocation().toString());
             return response;
         }
