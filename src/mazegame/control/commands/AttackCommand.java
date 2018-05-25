@@ -39,7 +39,8 @@ public class AttackCommand implements Command {
 
        nonPlayerCharacter = nonPlayerCharacterHashMap.get(randomKey);
 
-       gameClient.playerMessage("Attacking "+nonPlayerCharacter.getName());
+
+       gameClient.playerMessage("Attacking "+ com.sun.xml.internal.ws.util.StringUtils.capitalize(nonPlayerCharacter.getName()));
 
        int AcHit = diceRoller.generateAbilityScore(20,1) +strengthTable.getModifier(thePlayer.getStrength());
 

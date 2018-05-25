@@ -1,5 +1,7 @@
 package mazegame.entity;
 
+import mazegame.control.commandState.AttackState;
+
 import java.util.HashMap;
 
 public class Location {
@@ -124,12 +126,32 @@ public class Location {
     public boolean containsItem(String label) {
         return inventory.containsKey(label);
     }
+    public boolean isHostilePresent(){
+        for (NonPlayerCharacter nonPlayerCharacter: getNonPlayerCharacters().values()){
+            if(nonPlayerCharacter.getHostile()==true){
+                return nonPlayerCharacter.getHostile();
+            }
+            else {
+                return false;
+            }
+        }
+        return false;
+    }
+    public String hostile(){
+        if (isHostilePresent()){
+            return "Yes - Attack and Flee Command activated";
+        }
+        return "No";
+    }
 
     public String toString() {
         return "************************************************************\n" + this.label + "\n************************************************************\n"
                 + "Exits found :: " + availableExits() + "\n************************************************************\n"
                 + "Characters found :: " + availableCharacters() + "\n************************************************************\n"
-                + "Items found :: " + availableItems() + "\n************************************************************\n"
+                + "Items found :: " + availableItems() + "\n************************************************************\n"+
+                "Hostile Characters present?:: "+hostile()+"\n************************************************************\n"
                 + this.description + "\n************************************************************\n";
     }
+
+
 }

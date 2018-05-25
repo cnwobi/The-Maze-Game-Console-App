@@ -1,17 +1,13 @@
 package mazegame.control.commands;
 
-import mazegame.SimpleConsoleClient;
-import mazegame.boundary.IMazeClient;
 import mazegame.control.CommandResponse;
 import mazegame.control.ParsedInput;
 import mazegame.entity.Exit;
-import mazegame.entity.NonPlayerCharacter;
 import mazegame.entity.Player;
-import mazegame.utility.DiceRoller;
 
 public class MoveCommand implements Command {
-    private DiceRoller diceRoller = DiceRoller.getInstance();
-    IMazeClient gameClient = new SimpleConsoleClient();
+    /*private DiceRoller diceRoller = DiceRoller.getInstance();
+    IMazeClient gameClient = new SimpleConsoleClient();*/
 
     public CommandResponse execute(ParsedInput userInput, Player thePlayer) {
         /*thePlayer.getCurrentLocation().*/
@@ -32,7 +28,7 @@ public class MoveCommand implements Command {
             return new CommandResponse("This exit is locked please...acquire the ITECH 3215 banner to proceed");
         }
         thePlayer.setCurrentLocation(desiredExit.getDestination());
-       for(NonPlayerCharacter npc: thePlayer.getCurrentLocation().getNonPlayerCharacters().values()){
+      /* for(NonPlayerCharacter npc: thePlayer.getCurrentLocation().getNonPlayerCharacters().values()){
             if(npc.getHostile() == true){
                 gameClient.playerMessage("**** Hostile Characters in location****\n****Attack & Flee Command activated****\n" +
                         npc.getName() + " has attacked you\n" + npc.getName() + " is rolling an attack");
@@ -46,8 +42,8 @@ public class MoveCommand implements Command {
                 gameClient.getReply("\n<<Hit enter to continue>>");
                  break;
             }
-        }
-        return new CommandResponse("You successfully moved ");// + exitLabel + " and find   yourself somewhere else\n\n" + thePlayer.getCurrentLocation().toString());
+        }*/
+        return new CommandResponse("You successfully move " + exitLabel + " and find   yourself somewhere else\n\n" + thePlayer.getCurrentLocation().toString());
     }
 }
 
