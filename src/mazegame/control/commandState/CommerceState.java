@@ -1,9 +1,6 @@
 package mazegame.control.commandState;
 
-import mazegame.control.commands.LookCommand;
-import mazegame.control.commands.MoveCommand;
-import mazegame.control.commands.SellCommand;
-import mazegame.control.commands.BuyCommand;
+import mazegame.control.commands.*;
 import mazegame.entity.Blacksmith;
 import mazegame.entity.Player;
 
@@ -16,6 +13,7 @@ public class CommerceState extends CommandState {
         this.getAvailableCommands().put("move", new MoveCommand());
         this.getAvailableCommands().put("look", new LookCommand());
         this.getAvailableCommands().put("sell", new SellCommand());
+        this.getAvailableCommands().put("use", new UseCommand());
     }
 
     public CommandState update(Player thePlayer)

@@ -18,6 +18,7 @@ public class MovementState extends CommandState {
         this.getAvailableCommands().put("inv",new InvCommand());
         this.getAvailableCommands().put("equip",new EquipCommand());
         this.getAvailableCommands().put("unequip",new UnequipCommand());
+        this.getAvailableCommands().put("use",new UseCommand());
     }
 
     public CommandState update(Player thePlayer)

@@ -155,4 +155,9 @@ public int getWeightLimit() {
     public void setEquipped(ArrayList<Weapon> equipped) {
         this.equippedWeapon = equipped;
     }
+
+    @Override
+    public String restorLifePoints(int lifePoints) {
+        return super.restorLifePoints(lifePoints);
+    }
 }

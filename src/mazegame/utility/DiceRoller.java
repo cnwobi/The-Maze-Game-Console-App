@@ -20,7 +20,7 @@ public class DiceRoller {
 	public int generateAbilityScore (int faces,int numberOfRolls) {
 		d6.setFaces(faces);
 		ArrayList<Integer> results = new ArrayList<Integer> ();
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < numberOfRolls+9; i++) {
 			results.add(d6.roll());
 		}
 		

@@ -10,6 +10,7 @@ public class AttackState extends CommerceState {
         this.getAvailableCommands().put("flee", new MoveCommand());
 
         this.getAvailableCommands().put("attack", new AttackCommand());
+        this.getAvailableCommands().put("use",new UseCommand());
 
     }
     public CommandState update(Player thePlayer)

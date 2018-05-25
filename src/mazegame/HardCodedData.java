@@ -55,10 +55,10 @@ public class HardCodedData implements IMazeData {
 
 
         //add location characters
-         startUp.addNonPlayerCharacters("chukas",new NonPlayerCharacter("Chuka",20,21,10,false));
-        drawBridge.addNonPlayerCharacters("philip",new NonPlayerCharacter("philip",20,21,10,true,(Weapon)weapons.getWeapon("falchion"),(Armor)armors.getArmor("leather")));
-        drawBridge.addNonPlayerCharacters("hacka",new NonPlayerCharacter("hacka",19,7,13,true,(Weapon)weapons.getWeapon("falchion"),(Armor)armors.getArmor("padded")));
-        drawBridge.addNonPlayerCharacters("troy",new NonPlayerCharacter("troy",19,7,13,true,(Weapon)weapons.getWeapon("falchion"),(Armor)armors.getArmor("studded-leather")));
+         startUp.addNonPlayerCharacters("chukas",new NonPlayerCharacter("Chuka",20,21,46,false));
+        drawBridge.addNonPlayerCharacters("philip",new NonPlayerCharacter("philip",20,21,46,true,(Weapon)weapons.getWeapon("falchion"),(Armor)armors.getArmor("leather")));
+        drawBridge.addNonPlayerCharacters("hacka",new NonPlayerCharacter("hacka",19,7,46,true,(Weapon)weapons.getWeapon("falchion"),(Armor)armors.getArmor("padded")));
+        drawBridge.addNonPlayerCharacters("troy",new NonPlayerCharacter("troy",19,7,46,true,(Weapon)weapons.getWeapon("falchion"),(Armor)armors.getArmor("studded-leather")));
          // add location items
        // startUp.addItems("sword-bastard", new Weapon("sword-bastard",1000,390,"a  large sword designed to be used primarily with two hands"));
         startUp.addItems("battleaxe",new Weapon("battleaxe",10,7,"a large broad-bladed axe used in ancient warfare.",8,1));
@@ -244,7 +244,7 @@ public class HardCodedData implements IMazeData {
         weaponTable.setWeapon("dagger",new Weapon("dagger",170,2,"a short knife with a pointed and edged blade, used as a weapon.",4,1));
         weaponTable.setWeapon("nunchaku",new Weapon("nunchaku",1,2,"I dont know",6,1));
         weaponTable.setWeapon("greatClub",new Weapon("greatClub",2,10,"blank",10,1));
-        weaponTable.setWeapon("falchion",new Weapon("falchion",75,15,"a one-handed, single-edged sword of European origin, whose design is reminiscent of the Chinese dadao, and modern machete. ",4,2));
+        weaponTable.setWeapon("falchion",new Weapon("falchion",75,15,"a one-handed, single-edged sword of European origin, whose design is reminiscent of the Chinese dadao, and modern machete. ",4,4));
     }
     public void populateArmorTable(){
         ArmorTable armorTable = ArmorTable.getInstance();

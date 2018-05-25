@@ -5,7 +5,7 @@ public class Character {
     private int lifePoints;
     private String name;
     private int strength;
-
+    private static  final int MAX_LIFEPOINTS = 20;
 
 
 
@@ -49,5 +49,16 @@ public class Character {
 
 	public void setStrength(int strength) {
 		this.strength = strength;
+	}
+
+	public String restorLifePoints(int lifePoints){
+    	if (lifePoints + this.lifePoints > MAX_LIFEPOINTS){
+    		this.lifePoints =MAX_LIFEPOINTS;
+    		return "*****Life points restored to MAXIMUM*****";
+		}
+		else{
+    		this.lifePoints+=lifePoints;
+    		return "*****Life points restored by "+ lifePoints +" LP\nLife points is now "+this.lifePoints+" LP";
+		}
 	}
 }
