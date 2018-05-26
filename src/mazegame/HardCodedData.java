@@ -63,7 +63,7 @@ public class HardCodedData implements IMazeData {
        // startUp.addItems("sword-bastard", new Weapon("sword-bastard",1000,390,"a  large sword designed to be used primarily with two hands"));
         startUp.addItems("battleaxe",new Weapon("battleaxe",10,7,"a large broad-bladed axe used in ancient warfare.",8,1));
         startUp.addItems("dagger",(Item)weapons.getWeapon("dagger"));
-        startUp.addItems("life",new Collectible("life",10));
+        startUp.addItems("collectible",new Collectible("collectible",10));
         blackSmith.addItems("falchion", (Item) weapons.getWeapon("falchion"));
         blackSmith.addItems("nunchaku",(Item) weapons.getWeapon("nunchaku"));
         blackSmith.addItems("padded",(Item) armors.getArmor("padded"));
@@ -189,7 +189,7 @@ public class HardCodedData implements IMazeData {
     private void populateWeightLimitTable()
     {
         Dice dice = new Dice(20);
-        System.out.println("Dice roll *****************"+dice.roll());
+
         WeightLimit weightModifier = WeightLimit.getInstance();
         weightModifier.setModifier(1, 6);
         weightModifier.setModifier(2, 13);

@@ -10,7 +10,7 @@ public class UseCommand implements Command {
     @Override
     public CommandResponse execute(ParsedInput userInput, Player player) {
         if (userInput.getArguments().size() == 0) {
-            return new CommandResponse ("If you want to equip a weapon you need to tell me which.");
+            return new CommandResponse ("If you want to use you need to tell me which.");
         }
         String itemLabel = (String) userInput.getArguments().get(0);
 

@@ -23,13 +23,13 @@ public class DungeonMaster {
     }
 
     public void setupPlayer() {
-        gameClient.playerMessage("\nYour eyes are glassy your head is pounding that sadist of a lecturer has you pulling an “all-nighter” to get your assignment in. \nDespite being on your 8th can of “Guarana Max” your eyes start to close and you drift off to sleep at the keyboard…….");
+        /*gameClient.playerMessage("\nYour eyes are glassy your head is pounding that sadist of a lecturer has you pulling an “all-nighter” to get your assignment in. \nDespite being on your 8th can of “Guarana Max” your eyes start to close and you drift off to sleep at the keyboard…….");
         gameClient.getReply("\n<<Hit enter to continue>>");
         gameClient.playerMessage("You open your eyes but don’t believe what you see, you must be dreaming! \nInstead of finding yourself in front of your computer you appear to be lying in a clearing surrounded by a dark, menacing looking forest. \nA campfire burns to your left and opposite you with legs crossed sits another person who begins to speak…");
         gameClient.getReply("\n<<Hit enter to continue>>");
         gameClient.playerMessage("“Greetings stranger my name is Jonesy. I had almost given up hope, but my prayers appear to have been answered”\n" +
                 "You are too freaked out to say anything back.\n");
-        gameClient.getReply("\n<<Hit enter to continue>>");
+        gameClient.getReply("\n<<Hit enter to continue>>");*/
         String playerName = gameClient.getReply("'What name do you choose to be known by?', Jonesy asks (Please enter your name)");
         gameClient.playerMessage("\nJonesy continues, “You see " + playerName + ",I used to be a software engineering student just like you, but my evil lecturer sucked the life force out of me \nand I am condemned to suffer under his dominion for eternity.”");
         gameClient.playerMessage("You say “I’m hallucinating, must be the Guarana!”\n");
